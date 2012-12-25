@@ -5,4 +5,4 @@ twig:
         layout:       '::base.html.twig'
     form:
         resources:
-            - '::form_theme.html.twig'
+            - '::form_div_layout.html.twig'
