@@ -1,0 +1,10 @@
+{
+    "name": "yohang-symfony-framework-distribution",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "coffee-script": "*",
+        "less":          "*",
+        "bower":         "*"
+    }
+}
