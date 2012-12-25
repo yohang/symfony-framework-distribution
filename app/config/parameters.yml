@@ -13,3 +13,6 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    java_path:         /usr/bin/java
+    node_path:         /opt/local/bin/node

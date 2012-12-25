@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.css') }}" />
+        <script type="text/javascript" src="{{ asset('js/head.js') }}"></script>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
+        <script type="text/javascript" src="{{ asset('js/foot.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
