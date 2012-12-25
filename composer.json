@@ -1,26 +1,27 @@
 {
     "name": "yohang/symfony-framework-distribution",
-    "description": "A custom symfony distribution",
+    "description": "A custom Symfony distribution",
     "autoload": {
         "psr-0": {
             "": "src/"
         }
     },
     "require": {
-        "php":                           ">=5.3.3",
-        "symfony/symfony":               "2.1.*",
-        "doctrine/orm":                  "2.3.*",
-        "doctrine/doctrine-bundle":      "1.0.*",
-        "twig/extensions":               "1.0.*@dev",
-        "symfony/assetic-bundle":        "2.1.*",
-        "symfony/swiftmailer-bundle":    "2.1.*",
-        "symfony/monolog-bundle":        "2.1.*",
-        "sensio/distribution-bundle":    "2.1.*",
-        "sensio/framework-extra-bundle": "2.1.*",
-        "sensio/generator-bundle":       "2.1.*",
-        "yohang/dependency-tools":       "1.0.*",
-        "davidbadura/fixtures-bundle":   "1.0.*",
-        "kriswallsmith/assetic":         "1.1.*@dev"
+        "php":                                  ">=5.3.3",
+        "symfony/symfony":                      "2.1.*",
+        "doctrine/orm":                         "2.3.*",
+        "doctrine/doctrine-bundle":             "1.0.*",
+        "twig/extensions":                      "1.0.*@dev",
+        "symfony/assetic-bundle":               "2.1.*",
+        "symfony/swiftmailer-bundle":           "2.1.*",
+        "symfony/monolog-bundle":               "2.1.*",
+        "sensio/distribution-bundle":           "2.1.*",
+        "sensio/framework-extra-bundle":        "2.1.*",
+        "sensio/generator-bundle":              "2.1.*",
+        "yohang/dependency-tools":              "1.0.*",
+        "davidbadura/fixtures-bundle":          "1.0.*",
+        "kriswallsmith/assetic":                "1.1.*@dev",
+        "incenteev/composer-parameter-handler": "1.0.*@dev"
     },
     "require-dev": {
         "phpunit/phpunit":               "3.*"
@@ -28,6 +29,7 @@
     "scripts": {
         "post-install-cmd": [
             "Yohang\\DependencyTools::installDeps",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -35,6 +37,7 @@
         ],
         "post-update-cmd": [
             "Yohang\\DependencyTools::installDeps",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -49,6 +52,9 @@
             "bower": {
                 "path": "./node_modules/.bin/bower"
             }
+        },
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
         }
     }
 }

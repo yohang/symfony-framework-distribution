@@ -1,5 +1,5 @@
 {
-    "hash": "12d182742c70d1ce88373b830f8965af",
+    "hash": "c5c7a9b21db4f1015b66d5eb4bb6f3d5",
     "packages": [
         {
             "name": "davidbadura/fixtures-bundle",
@@ -327,6 +327,60 @@
             "keywords": [
                 "database",
                 "orm"
+            ]
+        },
+        {
+            "name": "incenteev/composer-parameter-handler",
+            "version": "dev-master",
+            "target-dir": "Incenteev/ParameterHandler",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Incenteev/ParameterHandler.git",
+                "reference": "6b42da93334d1b2977040175c74433470e4def60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Incenteev/ParameterHandler/archive/6b42da93334d1b2977040175c74433470e4def60.zip",
+                "reference": "6b42da93334d1b2977040175c74433470e4def60",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/yaml": ">=2.0,<2.3-dev"
+            },
+            "replace": {
+                "logsafe/composer-parameter-handler": "self.version"
+            },
+            "require-dev": {
+                "composer/composer": "*"
+            },
+            "time": "2012-10-26 13:03:36",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Incenteev\\ParameterHandler": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "Composer script handling your ignored parameter file",
+            "homepage": "https://github.com/Incenteev/ParameterHandler",
+            "keywords": [
+                "parameters management"
             ]
         },
         {
@@ -1423,6 +1477,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "twig/extensions": 20,
-        "kriswallsmith/assetic": 20
+        "kriswallsmith/assetic": 20,
+        "incenteev/composer-parameter-handler": 20
     }
 }
