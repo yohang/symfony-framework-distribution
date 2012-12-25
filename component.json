@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "jquery":     "latest",
+        "bootstrap":  "2.1.*",
+        "html5shiv":  "latest",
+        "underscore": "latest"
+  }
+}
