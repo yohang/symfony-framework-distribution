@@ -23,6 +23,12 @@ framework:
     session:
         save_path: %kernel.root_dir%/sessions
 
+sensio_framework_extra:
+    router:  { annotations: false }
+    request: { converters:  true  }
+    view:    { annotations: true  }
+    cache:   { annotations: false }
+
 parameters:
     project.root_dir:       %kernel.root_dir%/..
     project.components_dir: %kernel.root_dir%/Resources/components
