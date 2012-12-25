@@ -20,7 +20,8 @@ framework:
     default_locale:  "%locale%"
     trust_proxy_headers: false # Deprecated in 2.0; will be removed in 2.3 (used trusted_proxies instead)
     trusted_proxies: ~
-    session:         ~
+    session:
+        save_path: %kernel.root_dir%/sessions
 
 parameters:
     project.root_dir:       %kernel.root_dir%/..
