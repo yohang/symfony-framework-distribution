@@ -1,0 +1,8 @@
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+    globals:
+        layout:       '::base.html.twig'
+    form:
+        resources:
+            - '::form_theme.html.twig'
